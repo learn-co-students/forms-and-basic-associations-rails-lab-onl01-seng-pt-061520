@@ -47,7 +47,15 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:title)
+    params.require(:song).permit(:artist_name,:title, :content, :genre_id)
   end
+
+
+  # def song_genre_id=(ids)
+  #   @songs.each do |id|
+  #     song = Genre.song.find(params[id])
+  #     self.genres << genre
+  #   end
+  # end
 end
 
